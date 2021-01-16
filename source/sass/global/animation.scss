@@ -1,0 +1,65 @@
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hover-color-from-red {
+  from {
+    background-color: $red;
+  }
+
+  to {
+    background-color: $yellow;
+  }
+}
+
+@keyframes hover-color-from-translate {
+  from {
+    background-color: translate;
+  }
+
+  to {
+    background-color: $yellow;
+  }
+}
+
+@keyframes hover-menu {
+  from {
+    color: $white;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 10px;
+  }
+
+  to {
+    color: $red;
+    border-bottom: 1px solid $red;
+    padding-bottom: 20px;
+  }
+}
+
+@keyframes hover-about {
+  from {
+    border: 1px solid $gray;
+    transform: rotate(0);
+  }
+
+  to {
+    border: 1px solid $red;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes hover-color-about {
+  from {
+    color: $dark-gray;
+  }
+
+  to {
+    color: $red;
+  }
+}

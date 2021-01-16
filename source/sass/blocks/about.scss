@@ -1,0 +1,78 @@
+.about__container {
+  padding: 116px 0 107px;
+}
+
+.about__list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__item {
+  width: 250px;
+
+  &:hover .about__icon::before {
+    animation-name: hover-about;
+    animation-duration: 800ms;
+    animation-timing-function: ease-in-out;
+    border: 1px solid $red;
+    transform: rotate(45deg);
+  }
+
+  &:hover .about__title {
+    animation-name: hover-color-about;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    color: $red;
+  }
+}
+
+.about__icon {
+  position: relative;
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 30px;
+
+  &::before {
+    @include pseudo ("", absolute, 74px, 74px);
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: 1px solid $gray;
+  }
+}
+
+.about__icon svg {
+  position: relative;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.about__title {
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600px;
+  color: $dark-gray;
+  text-align: center;
+  cursor: default;
+
+  &::before {
+    @include pseudo ("", absolute, 41px, 1px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid $dark-gray;
+  }
+}
+
+.about__content {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300px;
+  text-align: center;
+  color: $medium-gray;
+  cursor: default;
+}

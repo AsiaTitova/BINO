@@ -1,0 +1,32 @@
+@mixin wrap ($width, $margin) {
+  width: $width;
+  margin: $margin;
+}
+
+@mixin pseudo ($content, $position, $width, $height) {
+  content: $content;
+  position: $position;
+  width: $width;
+  height: $height;
+}
+
+@mixin list-style ($list-style-type, $margin, $padding) {
+  list-style-type: $list-style-type;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin border-bottom-radius ($border-bottom-left-radius, $border-bottom-right-radius) {
+  border-bottom-left-radius: $border-bottom-left-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+}
+
+@mixin border-left-radius ($border-bottom-left-radius, $border-top-left-radius) {
+  border-bottom-left-radius: $border-bottom-left-radius;
+  border-top-left-radius: $border-top-left-radius;
+}
+
+@mixin border-right-radius ($border-top-right-radius, $border-bottom-right-radius) {
+  border-top-right-radius: $border-bottom-right-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+}

@@ -1,0 +1,36 @@
+// шрифт //
+$font-family: "OpenSans", "Arial", sans-serif;
+$font-title: "SourceSansPro", "Arial", sans-serif;
+
+
+// цвета  //
+
+$black: #000000;
+$white: #ffffff;
+$red: #e74c3c;
+$gray: #cbc6c0;
+$dark-gray: #6a6a6a;
+$medium-gray: #999999;
+$yellow: #fcd12a;
+$shadow: rgba(0, 0, 0, 0.25);
+
+
+// ширина экрана //
+
+$desktop-width: 1640px;
+$desktop-1440: 1440px;
+$content-desktop-width: 1140px;
+$max-desktop-width: 1921px;
+
+$desktop-breakpoint: 1139px;
+$header-width: 1639px;
+
+$tablet-breakpoint: 1023px;
+$tablet-width: 768px;
+
+$mobile-breakpoint: 767px;
+$mobile-width: 320px;
+
+/** подготовка графики - ретина **/
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

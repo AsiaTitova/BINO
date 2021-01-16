@@ -1,0 +1,16 @@
+.page-header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  flex: 0 0 auto;
+  background-color: transparent;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  padding: 40px 0;
+}
