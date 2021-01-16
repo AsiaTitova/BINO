@@ -1,0 +1,70 @@
+.history__container {
+  padding: 150px 0 140px 585px;
+  background-image: url("../img/monitor-background.png");
+  background-size: 506px 407px;
+  background-position: 0 150px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/monitor-background@2x.png");
+  }
+}
+
+.history__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 50px;
+  padding-left: 35px;
+  font-family: $font-title;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-gray;
+
+  &::before {
+    @include pseudo ("", absolute, 6px, 36px);
+    top: 0;
+    left: 0;
+    background-color: $red;
+  }
+}
+
+.history__content {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: $font-title;
+  font-size: 14px;
+  line-height: 29px;
+  color: $medium-gray;
+}
+
+.history__link {
+  display: block;
+  padding: 18px 0;
+  width: 233px;
+  font-size: 14px;
+  color: $white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 4.75px 0.25px $shadow;
+  background-color: $red;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    border: none;
+    transform: scale(1.1);
+    animation-name: hover-color-from-red;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    background-color: $yellow;
+    opacity: 0.5;
+  }
+}

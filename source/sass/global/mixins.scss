@@ -15,18 +15,3 @@
   margin: $margin;
   padding: $padding;
 }
-
-@mixin border-bottom-radius ($border-bottom-left-radius, $border-bottom-right-radius) {
-  border-bottom-left-radius: $border-bottom-left-radius;
-  border-bottom-right-radius: $border-bottom-right-radius;
-}
-
-@mixin border-left-radius ($border-bottom-left-radius, $border-top-left-radius) {
-  border-bottom-left-radius: $border-bottom-left-radius;
-  border-top-left-radius: $border-top-left-radius;
-}
-
-@mixin border-right-radius ($border-top-right-radius, $border-bottom-right-radius) {
-  border-top-right-radius: $border-bottom-right-radius;
-  border-bottom-right-radius: $border-bottom-right-radius;
-}
