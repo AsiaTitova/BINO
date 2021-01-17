@@ -63,3 +63,13 @@
     color: $red;
   }
 }
+
+@keyframes hover-filter {
+  from {
+    color: $medium-gray;
+  }
+
+  to {
+    color: $red;
+  }
+}

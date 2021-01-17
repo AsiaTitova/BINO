@@ -1,0 +1,52 @@
+.filter {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter__item {
+  position: relative;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 18px;
+  padding-right: 18px;
+
+  &::before {
+    @include pseudo ("/", absolute, 6px, 14px);
+    top: 0;
+    right: 0;
+    font-family: $font-title;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $medium-gray;
+  }
+}
+
+.filter__link {
+  display: block;
+  font-family: $font-title;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $medium-gray;
+
+  &--active {
+    color: $red;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+    animation-name: hover-filter;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    color: $red;
+    opacity: 0.7;
+  }
+}

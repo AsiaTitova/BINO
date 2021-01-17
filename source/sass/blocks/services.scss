@@ -1,0 +1,119 @@
+.services {
+  position: relative;
+  background-color: $black-gray;
+  background-image: url("../img/services-background.png");
+  background-size: 880px 764px;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+}
+
+.services__container {
+  padding: 154px 485px 135px 0;
+}
+
+.services__title {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-bottom: 75px;
+  margin-right: 114px;
+  padding-right: 35px;
+  font-family: $font-title;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: right;
+  color: $white;
+
+  &::before {
+    @include pseudo ("", absolute, 6px, 36px);
+    top: 0;
+    right: 0;
+    background-color: $red;
+  }
+}
+
+.services__list,
+.services__navigation-bar {
+  @include list-style (none, 0, 0);
+}
+
+.services__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.services__item:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.services__wrap {
+  width: 570px;
+}
+
+.services__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
+  color: $red;
+}
+
+.services__content {
+  margin: 0;
+  font-size: 14px;
+  font-family: $font-title;
+  text-align: right;
+  color: $medium-gray;
+}
+
+.services__navigation-bar {
+  position: absolute;
+  top: 323px;
+  left: 50px;
+}
+
+.services__bar {
+  width: 1px;
+  height: 34px;
+  background-color: $bar-gray;
+
+  &--active {
+    background-color: $red;
+  }
+}
+
+.services__bar:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.services__icon {
+  position: relative;
+  display: block;
+  margin-left: 40px;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+
+  &::before {
+    @include pseudo ("", absolute, 64px, 64px);
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    background-color: $light-gray;
+  }
+}
+
+.services__icon svg {
+  position: relative;
+  fill: $red;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
