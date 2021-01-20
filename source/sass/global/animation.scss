@@ -158,3 +158,16 @@
     opacity: 1;
   }
 }
+
+
+@keyframes hover-socials {
+  from {
+    fill: $white;
+    opacity: 0.3;
+  }
+
+  to {
+    fill: $red;
+    opacity: 1;
+  }
+}

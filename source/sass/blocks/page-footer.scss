@@ -1,0 +1,15 @@
+.page-footer {
+  background-color: $black-gray;
+}
+
+.page-footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page-footer__copyright {
+  font-size: 14px;
+  color: $medium-gray;
+}
