@@ -1,0 +1,123 @@
+.team {
+  background-image: url("../img/background-team.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-team@2x.png");
+  }
+}
+
+.team__container {
+  padding: 150px 0 120px;
+}
+
+.team__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: $font-title;
+  color: $white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team__content {
+  position: relative;
+  margin: 0;
+  margin-bottom: 130px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 29px;
+  color: $medium-gray;
+  text-align: center;
+
+  &::before {
+    @include pseudo ("", absolute, 195px, 2px);
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 40px dashed $medium-gray;
+    clip: rect(39px, auto, auto, auto);
+  }
+
+  &::after {
+    @include pseudo ("", absolute, 8px, 8px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: $red;
+    border-radius: 50%;
+  }
+}
+
+.team__list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team__item {
+  position: relative;
+  padding: 10px 0 130px;
+
+  &:hover .team__info {
+    display: block;
+  }
+
+  &:hover .team__photo {
+    position: relative;
+
+    &::before {
+      @include pseudo ("", absolute, 1px, 107px);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+    }
+  }
+
+  &:hover .team__photo img {
+    transform: scale(1.5);
+    box-shadow: 0 5px 12.75px 2.25px rgba(0, 0, 0, 1);
+  }
+}
+
+.team__info {
+  display: none;
+  position: absolute;
+  width: 250px;
+  bottom: 0;
+  left: -100px;
+}
+
+.team__photo img {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid $red;
+}
+
+.team__name {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: $red;
+  font-weight: 600;
+  text-align: center;
+}
+
+.team__position {
+  margin: 0;
+  font-size: 14px;
+  font-family: $font-title;
+  color: $white;
+  line-height: 24px;
+  text-align: center;
+}

@@ -18,6 +18,16 @@
   }
 }
 
+@keyframes hover-color-from-gray {
+  from {
+    background-color: $medium-gray;
+  }
+
+  to {
+    background-color: $yellow;
+  }
+}
+
 @keyframes hover-color-from-translate {
   from {
     background-color: translate;
@@ -71,5 +81,80 @@
 
   to {
     color: $red;
+  }
+}
+
+@keyframes hover-mask {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes hover-paginator {
+  from {
+    background-color: $paginator-gray;
+  }
+
+  to {
+    background-color: $yellow;
+  }
+}
+
+@keyframes hover-paginator-active {
+  from {
+    background-color: $red;
+  }
+
+  to {
+    background-color: $yellow;
+  }
+}
+
+@keyframes hover-pricing {
+  from {
+    background-color: $medium-gray;
+  }
+
+  to {
+    background-color: $red;
+  }
+}
+
+
+@keyframes hover-clients {
+  from {
+    box-shadow: 0 1px 3px 0 rgba(31, 31, 31, 0.09);
+    filter: grayscale(100%);
+    opacity: 0.3;
+  }
+
+  to {
+    box-shadow: 0 3px 9px 1px rgba(31, 31, 31, 0.3);
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hover-article {
+  from {
+    color: $white;
+  }
+
+  to {
+    color: $yellow;
+  }
+}
+
+@keyframes hover-blog {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

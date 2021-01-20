@@ -5,6 +5,10 @@
   background-size: 880px 764px;
   background-position: 100% 0;
   background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/services-background@2x.png");
+  }
 }
 
 .services__container {

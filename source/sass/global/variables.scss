@@ -14,25 +14,15 @@ $medium-gray: #999999;
 $light-gray: #e6e7eb;
 $black-gray: #202020;
 $bar-gray: #3e3e3e;
+$paginator-gray: #f4f5f9;
 $yellow: #fcd12a;
 $shadow: rgba(0, 0, 0, 0.25);
 
 
 // ширина экрана //
 
-$desktop-width: 1640px;
-$desktop-1440: 1440px;
-$content-desktop-width: 1140px;
-$max-desktop-width: 1921px;
-
-$desktop-breakpoint: 1139px;
-$header-width: 1639px;
-
-$tablet-breakpoint: 1023px;
-$tablet-width: 768px;
-
-$mobile-breakpoint: 767px;
-$mobile-width: 320px;
+$desktop-width: 1920px;
+$content-width: 1170px;
 
 /** подготовка графики - ретина **/
 $retina-dpi: 144dpi;

@@ -1,0 +1,87 @@
+.clients__container {
+  padding: 150px 0 110px;
+}
+
+.clients__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-title;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-gray;
+  text-align: center;
+}
+
+.clients__content {
+  position: relative;
+  margin: 0;
+  margin-bottom: 70px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $medium-gray;
+  text-align: center;
+
+  &::before {
+    @include pseudo ("", absolute, 195px, 2px);
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 40px dashed $medium-gray;
+    clip: rect(39px, auto, auto, auto);
+  }
+
+  &::after {
+    @include pseudo ("", absolute, 8px, 8px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: $red;
+    border-radius: 50%;
+  }
+}
+
+.clients__list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients__item {
+  position: relative;
+  width: 210px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px 0 rgba(31, 31, 31, 0.09);
+  filter: grayscale(100%);
+  opacity: 0.3;
+
+  &--bg {
+    background-color: $red;
+  }
+
+  &--left svg {
+    left: -15px;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 9px 1px rgba(31, 31, 31, 0.3);
+    filter: grayscale(0);
+    opacity: 1;
+    animation-name: hover-clients;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.clients__item svg {
+  display: block;
+  position: relative;
+}

@@ -1,0 +1,217 @@
+.pricing__container {
+  padding: 156px 0 145px;
+}
+
+.pricing__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-title;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-gray;
+  text-align: center;
+}
+
+.pricing__content {
+  position: relative;
+  margin: 0;
+  margin-bottom: 110px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 29px;
+  color: $medium-gray;
+  text-align: center;
+
+  &::before {
+    @include pseudo ("", absolute, 195px, 2px);
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 40px dashed $medium-gray;
+    clip: rect(39px, auto, auto, auto);
+  }
+
+  &::after {
+    @include pseudo ("", absolute, 8px, 8px);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: $red;
+    border-radius: 50%;
+  }
+}
+
+.pricing__list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pricing__item {
+  width: 380px;
+  background-color: $paginator-gray;
+  cursor: pointer;
+
+  &--active .pricing__wrap {
+    background-color: $red;
+  }
+
+  &--active .pricing__price {
+    color: $red;
+  }
+
+  &--active .pricing__link {
+    background-color: $red;
+  }
+
+  &--active .pricing__link:hover,
+  &--active .pricing__price:focus {
+    animation-name: hover-color-from-red;
+  }
+
+  &:hover .pricing__wrap,
+  &:focus .pricing__wrap {
+    animation-name: hover-pricing;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    background-color: $red;
+  }
+
+  &--active:hover .pricing__wrap,
+  &--active:focus .pricing__wrap {
+    animation-name: none;
+  }
+
+  &:hover .pricing__link,
+  &:focus .pricing__link {
+    animation-name: hover-pricing;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    background-color: $red;
+  }
+
+  &--active:hover .pricing__link,
+  &--active:focus .pricing__link {
+    animation-name: none;
+  }
+
+  &:hover .pricing__price,
+  &:focus .pricing__price {
+    animation-name: hover-filter;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+    color: $red;
+  }
+
+  &--active:hover .pricing__price,
+  &--active:focus .pricing__price {
+    animation-name: none;
+  }
+}
+
+.pricing__wrap {
+  position: relative;
+  background-color: $medium-gray;
+  padding: 45px 125px 130px;
+}
+
+.pricing__subtitle {
+  margin: 0 auto;
+  color: $white;
+  font-size: 24px;
+  font-weight: 600;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.pricing__circle {
+  position: absolute;
+  padding: 60px 20px;
+  border-radius: 50%;
+  background-color: rgba(244, 245, 249, 0.251);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 174px;
+  height: 174px;
+  top: 115px;
+  z-index: 2;
+
+  &::before {
+    @include pseudo ("", absolute, 154px, 154px);
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background-color: $white;
+  }
+}
+
+.pricing__price {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  margin-bottom: 3px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: $medium-gray;
+}
+
+.pricing__period {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: $medium-gray;
+}
+
+.pricing__conditions {
+  @include list-style (none, 0, 120px 80px 50px);
+}
+
+.pricing__condition {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: $medium-gray;
+}
+
+.pricing__condition:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.pricing__link {
+  display: block;
+  margin: 0 auto 50px;
+  padding: 18px 0;
+  width: 145px;
+  font-size: 12px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 4.75px 0.25px $shadow;
+  background-color: $medium-gray;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    transform: scale(1.1);
+    animation-name: hover-color-from-gray;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    background-color: $yellow;
+    opacity: 0.5;
+  }
+}

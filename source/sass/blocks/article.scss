@@ -1,0 +1,114 @@
+.article {
+  display: flex;
+}
+
+.article__picture,
+.article__info {
+  width: 50%;
+}
+
+.article__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.article__info {
+  position: relative;
+  padding: 70px 200px 70px 50px;
+  display: none;
+
+  &::before {
+    @include pseudo ("", absolute, 70px, 70px);
+    top: 200px;
+    left: -70px;
+    border-right: 35px solid $red;
+    border-left: 35px solid transparent;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+  }
+
+  @media (max-width: 1920px) {
+    padding: 70px 50px;
+  }
+}
+
+.article__topic-list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article__item {
+  position: relative;
+  margin: 0;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: $white;
+}
+
+.article__item:not(:last-child) {
+  margin-right: 4px;
+
+  &::before {
+    @include pseudo ("/", absolute, 6px, 14px);
+    top: 0;
+    right: 0;
+  }
+}
+
+.article__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 45px;
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-family: $font-title;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &::before {
+    @include pseudo ("", absolute, 44px, 4px);
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+  }
+}
+
+.article__description {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 30px;
+  color: $white;
+}
+
+.article__link {
+  position: relative;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  color: $white;
+  font-style: italic;
+  text-decoration: none;
+
+  &::before {
+    @include pseudo ("»", absolute, 5px, 24px);
+    top: 0;
+    right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+    animation-name: hover-article;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

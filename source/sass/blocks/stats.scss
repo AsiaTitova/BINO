@@ -1,0 +1,65 @@
+.stats {
+  background-image: url("../img/background-stats.png");
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-stats@2x.png");
+  }
+}
+
+.stats__container {
+  padding: 157px 0 142px;
+}
+
+.stats__list {
+  @include list-style (none, 0, 0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stats__icon {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 45px;
+  padding: 38px;
+  border-radius: 50%;
+  border: 1px solid $white;
+
+  &--features {
+    padding: 38px 43px;
+  }
+
+  &--favourites {
+    padding: 42px 38px;
+  }
+
+  &--posts {
+    padding: 40px 38px;
+  }
+
+  &--like {
+    padding: 36px 38px;
+  }
+}
+
+.stats__number {
+  display: block;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats__content {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  color: $white;
+  text-align: center;
+}
