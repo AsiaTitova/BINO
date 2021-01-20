@@ -1,7 +1,5 @@
 # BINO
 
-BINO
--------------------------------------------------------------
 providing services in the field of web and print design, photography
 
 Technology
