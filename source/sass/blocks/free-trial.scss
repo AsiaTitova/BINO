@@ -1,0 +1,70 @@
+.free-trial {
+  background-image: url("../img/background-free-trial.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background-free-trial@2x.png");
+  }
+}
+
+.free-trial__container {
+  padding: 150px 0 140px;
+}
+
+.free-trial__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $font-title;
+  font-size: 36px;
+  font-weight: 400;
+  color: $white;
+  text-align: center;
+}
+
+.free-trial__title span {
+  font-weight: bold;
+}
+
+
+.free-trial__text {
+  position: relative;
+  margin: 0;
+  margin-bottom: 70px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $white;
+  text-align: center;
+}
+
+.free-trial__link {
+  display: block;
+  padding: 25px 0;
+  margin: 0 auto;
+  width: 225px;
+  font-size: 14px;
+  color: $white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 4.75px 0.25px $shadow;
+  background-color: $red;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    transform: scale(1.1);
+    animation-name: hover-color-from-red;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    background-color: $yellow;
+    opacity: 0.5;
+  }
+}
