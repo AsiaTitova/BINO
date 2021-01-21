@@ -1,5 +1,9 @@
 .clients__container {
   padding: 150px 0 110px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 150px 20px 110px;
+  }
 }
 
 .clients__title {
@@ -11,6 +15,10 @@
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 24px;
+  }
 }
 
 .clients__content {
@@ -49,6 +57,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: $desktop-breakpoint) {
+    justify-content: space-around;
+  }
 }
 
 .clients__item {

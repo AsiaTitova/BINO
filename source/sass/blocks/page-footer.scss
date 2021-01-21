@@ -1,4 +1,5 @@
 .page-footer {
+  position: relative;
   background-color: $black-gray;
 }
 
@@ -7,9 +8,49 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: $tablet-content) {
+    justify-content: center;
+  }
 }
 
 .page-footer__copyright {
   font-size: 14px;
   color: $medium-gray;
+
+  @media (max-width: $tablet-content) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.page-footer__scroll {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  top: -29px;
+  right: 55px;
+  border: none;
+  border-radius: 50%;
+  background-color: $red;
+
+  &:hover,
+  &:focus {
+    background-color: $medium-gray;
+    animation-name: hover-button;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:active {
+    background-color: $red;
+    opacity: 0.5;
+  }
+}
+
+.page-footer__icon {
+  fill: $white;
+  transform: rotate(90deg);
+  width: 8px;
+  height: 17px;
 }

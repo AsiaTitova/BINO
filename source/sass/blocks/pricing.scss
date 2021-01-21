@@ -1,5 +1,9 @@
 .pricing__container {
   padding: 156px 0 145px;
+
+  @media (max-width: $desktop-content) {
+    padding: 156px 0 115px;
+  }
 }
 
 .pricing__title {
@@ -11,6 +15,10 @@
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 24px;
+  }
 }
 
 .pricing__content {
@@ -41,6 +49,10 @@
     background-color: $red;
     border-radius: 50%;
   }
+
+  @media (max-width: $desktop-content) {
+    padding: 0 20px 30px;
+  }
 }
 
 .pricing__list {
@@ -48,6 +60,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $desktop-breakpoint) {
+    justify-content: space-around;
+  }
 }
 
 .pricing__item {
@@ -110,12 +126,28 @@
   &--active:focus .pricing__price {
     animation-name: none;
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $desktop-content) {
+    width: 370px;
+  }
+
+  @media (max-width: $mobile-content) {
+    width: 100%;
+  }
 }
 
 .pricing__wrap {
   position: relative;
   background-color: $medium-gray;
   padding: 45px 125px 130px;
+
+  @media (max-width: $mobile-content) {
+    padding: 45px 25px 130px;
+  }
 }
 
 .pricing__subtitle {
@@ -123,7 +155,7 @@
   color: $white;
   font-size: 24px;
   font-weight: 600;
-  align-items: center;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -172,6 +204,10 @@
 
 .pricing__conditions {
   @include list-style (none, 0, 120px 80px 50px);
+
+  @media (max-width: $mobile-content) {
+    padding: 120px 30px 50px;
+  }
 }
 
 .pricing__condition {

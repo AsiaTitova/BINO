@@ -11,6 +11,10 @@
 
 .free-trial__container {
   padding: 150px 0 140px;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 150px 20px 140px;
+  }
 }
 
 .free-trial__title {
@@ -21,6 +25,10 @@
   font-weight: 400;
   color: $white;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 24px;
+  }
 }
 
 .free-trial__title span {
@@ -40,31 +48,41 @@
 
 .free-trial__link {
   display: block;
-  padding: 25px 0;
-  margin: 0 auto;
+  padding: 18px 0;
   width: 225px;
+  margin: 0 auto;
   font-size: 14px;
   color: $white;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
   border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid $white;
   box-shadow: 0 2px 4.75px 0.25px $shadow;
-  background-color: $red;
-  border: none;
+
+  &--background {
+    margin-right: 30px;
+  }
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    transform: scale(1.1);
-    animation-name: hover-color-from-red;
-    animation-duration: 500ms;
+    background-color: $red;
+    border: 1px solid $red;
+    animation-name: hover-button-transparent;
+    animation-duration: 600ms;
     animation-timing-function: ease-in-out;
   }
 
   &:active {
-    background-color: $yellow;
+    background-color: $red;
     opacity: 0.5;
+  }
+
+  @media (max-width: $desktop-content) {
+    width: 160px;
+    padding: 14px 0;
+    font-size: 12px;
   }
 }

@@ -1,7 +1,7 @@
 .promo-slider {
   position: relative;
   background-image: url("../img/shadow-background.svg"), url("../img/slider-background.jpg");
-  background-position: 0 0, 0 0;
+  background-position: center 0, center 0;
   background-repeat: no-repeat, no-repeat;
   background-size: cover, cover;
 
@@ -28,7 +28,7 @@
 .promo-slider__container {
   position: relative;
   z-index: 3;
-  padding: 325px 190px 500px;
+  padding: 325px 50px 500px;
 
   &::before {
     @include pseudo ("", absolute, 74px, 74px);
@@ -53,6 +53,18 @@
     background-position: 21px 16px;
     background-repeat: no-repeat;
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 325px 50px 350px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 225px 30px 250px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 125px 20px 250px;
+  }
 }
 
 .swiper-container {
@@ -61,12 +73,46 @@
   height: 100%;
 }
 
+.promo-slider__content {
+  width: 100%;
+  padding: 0 607px;
+  box-sizing: border-box;
+
+  @media (max-width: $desktop-width) {
+    padding: 0 320px;
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 0 200px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 0 100px;
+  }
+
+  @media (max-width: $tablet-content) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 0 20px;
+  }
+}
+
 .promo-slider__slogan {
   margin-bottom: 50px;
   font-family: $font-title;
   color: $white;
   font-size: 24px;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile-content) {
+    font-size: 14px;
+  }
 }
 
 .promo-slider__title {
@@ -96,14 +142,36 @@
     background-color: $red;
     border-radius: 50%;
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $desktop-content) {
+    font-size: 30px;
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: $mobile-content) {
+    font-size: 24px;
+  }
 }
 
 .promo-slider__text {
   margin-bottom: 50px;
+  padding: 0 90px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
   color: $gray;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 0;
+  }
+
+  @media (max-width: $desktop-content) {
+    font-size: 12px;
+  }
 }
 
 .promo-slider__wrap {
@@ -128,29 +196,26 @@
 
   &--background {
     margin-right: 30px;
-    padding: 20px 0;
-    background-color: $red;
-    border: none;
   }
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    border: none;
-    transform: scale(1.1);
-    animation-name: scale, hover-color-from-translate;
-    animation-duration: 500ms;
+    background-color: $red;
+    border: 1px solid $red;
+    animation-name: hover-button-transparent;
+    animation-duration: 600ms;
     animation-timing-function: ease-in-out;
   }
 
-  &--background:hover,
-  &--background:focus {
-    animation-name: hover-color-from-red;
+  &:active {
+    background-color: $red;
+    opacity: 0.5;
   }
 
-  &:active {
-    background-color: $yellow;
-    opacity: 0.5;
+  @media (max-width: $desktop-content) {
+    width: 160px;
+    padding: 14px 0;
+    font-size: 12px;
   }
 }
 
@@ -164,9 +229,9 @@
   height: 45px;
   z-index: 5;
   padding: 10px 15px;
-  border: none;
   border-radius: 2px;
-  background-color: $red;
+  background-color: transparent;
+  border: 1px solid $white;
   cursor: pointer;
 
   &::after {
@@ -184,10 +249,10 @@
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    transform: scale(1.1);
-    animation-name: scale, hover-color-from-red;
-    animation-duration: 500ms;
+    background-color: $red;
+    border: 1px solid $red;
+    animation-name: hover-button-transparent;
+    animation-duration: 600ms;
     animation-timing-function: ease-in-out;
   }
 
@@ -195,7 +260,6 @@
   &:disabled:focus {
     animation-name: none;
     background-color: $white;
-    transform: scale(1);
     cursor: default;
   }
 
@@ -212,10 +276,21 @@
       right: 0;
     }
   }
+
+  @media (max-width: $tablet-content) {
+    width: 30px;
+    height: 30px;
+    padding: 5px 7px;
+  }
 }
 
 .promo-slider__icon {
   fill: $white;
+
+  @media (max-width: $tablet-content) {
+    width: 10px;
+    height: 12px;
+  }
 }
 
 .swiper-button-disabled {

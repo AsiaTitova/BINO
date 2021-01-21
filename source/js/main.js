@@ -1,13 +1,50 @@
 'use strict';
 
 (function () {
+
+  const removeClass = (element, className) => {
+    element.classList.remove(className);
+  }
+
+  // ------ navigation ------ //
+
+  const container = document.querySelector(".page-header");
+  const toggler = document.querySelector(".page-header__toggler");
+
+  toggler.addEventListener("click", function () {
+    container.classList.toggle("page-header--menu");
+  })
+
+  // ------ services ------ //
+
+  const servicesItems = document.querySelectorAll(".services__item");
+
+  const showActiveServicesItem = () => {
+    servicesItems.forEach(function (item) {
+      item.onmouseenter = item.onmouseleave = handler;
+
+      function handler (evt) {
+
+        if (evt.type === 'mouseenter') {
+          evt.target.classList.add("services__item--active");
+        }
+
+        if (evt.type === 'mouseleave') {
+          evt.target.classList.remove("services__item--active");
+        }
+      }
+    });
+  }
+
+  showActiveServicesItem();
+
+  // ------ study paginator ------ //
+
   const tabs = document.querySelector("#tab-nav");
   const studySliders = document.querySelectorAll(".study__item");
   const studyPaginators = document.querySelectorAll(".paginator__button");
   const studySlidersActiveClass = "study__item--active";
   const studyPaginatorActiveClass = "paginator__button--active";
-
-  // ------ study paginator ------ //
 
   const hideActiveTabs = () => {
     const arrStudySliders = Array.from(studySliders);
@@ -51,10 +88,6 @@
   // ------ pricing ------ //
 
   const pricingItem = document.querySelectorAll(".pricing__item");
-
-  const removeClass = (element, className) => {
-    element.classList.remove(className);
-  }
 
   const removeActiveClassForPricing = () => {
     pricingItem.forEach(function (plan) {

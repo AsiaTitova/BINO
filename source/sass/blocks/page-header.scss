@@ -4,13 +4,102 @@
   z-index: 5;
   flex: 0 0 auto;
   background-color: transparent;
+
+  @media (max-width: $desktop-content) {
+    &--menu {
+      background-color: $white;
+      height: 100%;
+    }
+
+    &--menu .page-header__container {
+      background-color: $black-gray;
+    }
+
+    &--menu .navigation {
+      display: block;
+      background-color: $white;
+      padding: 60px 40px 40px;
+    }
+
+    &--menu .navigation__item {
+      padding: 20px 0;
+    }
+
+    &--menu .navigation__link {
+      color: $dark-gray;
+    }
+
+    &--menu .page-header__toggler::before {
+      top: 23px;
+      transform: rotate(45deg);
+    }
+
+    &--menu .page-header__toggler::after {
+      top: 23px;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .page-header__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .page-header__logo {
   padding: 40px 0;
+
+  @media (max-width: $desktop-content) {
+    padding: 10px 0 10px 40px;
+  }
+}
+
+.page-header__toggler {
+  display: none;
+
+  @media (max-width: $desktop-content) {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $medium-gray;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+
+    &::before,
+    &::after {
+      @include pseudo ("", absolute, 30px, 2px);
+      top: 16px;
+      left: 10px;
+      background-color: $white;
+    }
+
+    &::after {
+      top: 27px;
+    }
+  }
+
+  &:hover {
+    background-color: $red;
+    animation-name: hover-button;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.page-header__navigation {
+  @media (max-width: $desktop-content) {
+    width: 100%;
+  }
 }

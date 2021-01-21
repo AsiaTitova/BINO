@@ -1,5 +1,21 @@
 .portfolio__container {
   padding: 137px 230px 50px;
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 137px 130px 50px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 137px 50px 50px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 137px 50px 40px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 137px 16px 40px;
+  }
 }
 
 .portfolio__title {
@@ -11,6 +27,10 @@
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 24px;
+  }
 }
 
 .portfolio__content {
@@ -52,6 +72,14 @@
 .portfolio__item {
   position: relative;
   width: 25%;
+
+  @media (max-width: $desktop-content) {
+    width: 50%;
+  }
+
+  @media (max-width: $tablet-content) {
+    width: 100%;
+  }
 }
 
 .portfolio__link {

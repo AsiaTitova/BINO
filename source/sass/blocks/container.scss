@@ -1,4 +1,28 @@
 .container {
   width: $content-width;
   margin: 0 auto;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 1024px;
+  }
+
+  @media (max-width: $desktop-content) {
+    width: 768px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    width: 640px;
+  }
+
+  @media (max-width: $tablet-content) {
+    width: 580px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    width: 480px;
+  }
+
+  @media (max-width: $mobile-content) {
+    width: 320px;
+  }
 }

@@ -21,6 +21,7 @@
             </picture>
           </a>
         </div>
+        <button class="page-header__toggler" type="button"aria-label="toggle menu"></button>
         <ul class="page-header__navigation navigation">
           <li class="navigation__item">
             <a class="navigation__link" href="#home" aria-label="go to Home page">Home</a>
@@ -48,7 +49,7 @@
     </header>
     <main class="page-main">
       <section class="page-main__promo-slider promo-slider" id="home">
-        <div class="promo-slider__container container">
+        <div class="promo-slider__container">
           <div class="swiper-container">
             <button class="promo-slider__button promo-slider__button--prev swiper-button-prev" type="button" aria-label="previous slide">
               <svg class="promo-slider__icon" width="12" height="21">
@@ -67,20 +68,12 @@
                   <h1 class="promo-slider__title">WELCOME TO BINO</h1>
                   <p class="promo-slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>
-                <div class="promo-slider__wrap">
-                  <a class="promo-slider__link promo-slider__link--background" href="#" aria-label="get started">Get started Now</a>
-                  <a class="promo-slider__link" href="#" aria-label="learn more">Learn more</a>
-                </div>
               </div>
               <div class="swiper-slide">
                 <div class="promo-slider__content">
                   <p class="promo-slider__slogan">Our Clients Are Our First Priority</p>
                   <h1 class="promo-slider__title">Web design</h1>
                   <p class="promo-slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </div>
-                <div class="promo-slider__wrap">
-                  <a class="promo-slider__link promo-slider__link--background" href="#" aria-label="get started">Get started Now</a>
-                  <a class="promo-slider__link" href="#" aria-label="learn more">Learn more</a>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -89,12 +82,12 @@
                   <h1 class="promo-slider__title">Photography</h1>
                   <p class="promo-slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>
-                <div class="promo-slider__wrap">
-                  <a class="promo-slider__link promo-slider__link--background" href="#" aria-label="get started">Get started Now</a>
-                  <a class="promo-slider__link" href="#" aria-label="learn more">Learn more</a>
-                </div>
               </div>
             </div>
+          </div>
+          <div class="promo-slider__wrap">
+            <a class="promo-slider__link promo-slider__link--background" href="#" aria-label="get started">Get started Now</a>
+            <a class="promo-slider__link" href="#" aria-label="learn more">Learn more</a>
           </div>
         </div>
       </section>
@@ -498,7 +491,7 @@
           <h2 class="team__title">Our team</h2>
           <p class="team__content">Meet the craziest team. Share your thoughts with them.</p>
           <ul class="team__list">
-            <li class="team__item">
+            <li class="team__item team__item--one">
               <div class="team__photo">
                 <picture>
                   <!-- 1x: 50px, 2x: 100px --><source srcset="img/content-photo1.webp 1x, img/content-photo1@2x.webp 2x" type="image/webp">
@@ -510,7 +503,7 @@
                 <p class="team__position">manager</p>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item team__item--two">
               <div class="team__photo">
                 <picture>
                   <!-- 1x: 50px, 2x: 100px --><source srcset="img/content-photo2.webp 1x, img/content-photo2@2x.webp 2x" type="image/webp">
@@ -522,7 +515,7 @@
                 <p class="team__position">UX/UI Designer</p>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item team__item--three">
               <div class="team__photo">
                 <picture>
                   <!-- 1x: 50px, 2x: 100px --><source srcset="img/content-photo3.webp 1x, img/content-photo3@2x.webp 2x" type="image/webp">
@@ -534,7 +527,7 @@
                 <p class="team__position">tester</p>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item team__item--four">
               <div class="team__photo">
                 <picture>
                   <!-- 1x: 50px, 2x: 100px --><source srcset="img/content-photo4.webp 1x, img/content-photo4@2x.webp 2x" type="image/webp">
@@ -546,7 +539,7 @@
                 <p class="team__position">front-end developer</p>
               </div>
             </li>
-            <li class="team__item">
+            <li class="team__item team__item--five">
               <div class="team__photo">
                 <picture>
                   <!-- 1x: 50px, 2x: 100px --><source srcset="img/content-photo5.webp 1x, img/content-photo5@2x.webp 2x" type="image/webp">
@@ -823,6 +816,11 @@
         </ul>
         <p class="page-footer__copyright">Kazi Erfan © All Rights Reserved </p>
       </div>
+      <button class="page-footer__scroll" type="button" aria-label="scroll up">
+        <svg class="page-footer__icon" width="12" height="21">
+          <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+        </svg>
+      </button>
     </footer>
 
     <script src="js/main.js"></script>

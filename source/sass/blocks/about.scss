@@ -4,12 +4,20 @@
 
 .about__container {
   padding: 116px 0 107px;
+
+  @media (max-width: $desktop-content) {
+    padding: 116px 0 57px;
+  }
 }
 
 .about__list {
   @include list-style (none, 0, 0);
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $desktop-content) {
+    flex-wrap: wrap;
+  }
 }
 
 .about__item {
@@ -28,6 +36,25 @@
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     color: $red;
+  }
+
+  @media (max-width: $desktop-content) {
+    width: 50%;
+    padding: 0 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $tablet-content) {
+    width: 100%;
+    padding: 0 150px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 100px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 0 50px;
   }
 }
 

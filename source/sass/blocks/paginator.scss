@@ -23,9 +23,8 @@
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    transform: scale(1.1);
-    animation-name: hover-paginator;
+    background-color: $red;
+    animation-name: hover-button;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
   }

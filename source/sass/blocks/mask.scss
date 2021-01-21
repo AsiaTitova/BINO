@@ -8,6 +8,18 @@
   top: 0;
   left: 0;
   display: none;
+
+  @media (max-width: $desktop-width) {
+    padding: 65% 55px 20%;
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 130px 20px 30px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 65% 35px 20%;
+  }
 }
 
 .mask__title {

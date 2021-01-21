@@ -47,20 +47,19 @@
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 2px 4.75px 0.25px $shadow;
-  background-color: $red;
   border: none;
+  background-color: $red;
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    transform: scale(1.1);
-    animation-name: hover-color-from-red;
+    background-color: $medium-gray;
+    animation-name: hover-button;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
   }
 
   &:active {
-    background-color: $yellow;
+    background-color: $red;
     opacity: 0.5;
   }
 }

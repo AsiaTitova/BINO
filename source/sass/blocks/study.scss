@@ -8,6 +8,20 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/background-study@2x.png");
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    background-position: 437px 320px;
+  }
+
+  @media (max-width: $desktop-content) {
+    padding: 147px 20px 150px;
+    background-position: 181px 320px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 147px 16px 150px;
+    background-position: center 320px;
+  }
 }
 
 .study__title {
@@ -19,6 +33,10 @@
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
+
+  @media (max-width: $desktop-content) {
+    font-size: 24px;
+  }
 }
 
 .study__content {
@@ -49,14 +67,33 @@
     background-color: $red;
     border-radius: 50%;
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-content) {
+    margin-bottom: 70px;
+  }
 }
 
 .study__wrap {
   position: relative;
   width: 665px;
+  min-height: 653px;
   padding: 80px 65px 50px;
   background-color: $white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $desktop-content) {
+    width: 465px;
+    padding: 80px 40px 50px;
+  }
+
+  @media (max-width: $mobile-content) {
+    width: 100%;
+    padding: 40px 16px 30px;
+  }
 }
 
 .study__list {
@@ -106,6 +143,10 @@
     transform: translateX(-50%);
     background-color: $dark-gray;
   }
+
+  @media (max-width: $mobile-content) {
+    font-size: 16px;
+  }
 }
 
 .study__description {
@@ -122,7 +163,7 @@
 
 .study__link {
   display: block;
-  margin: 0 auto 50px;
+  margin: auto auto 50px;
   padding: 18px 0;
   width: 145px;
   font-size: 12px;
@@ -133,20 +174,19 @@
   text-align: center;
   border-radius: 3px;
   box-shadow: 0 2px 4.75px 0.25px $shadow;
-  background-color: $red;
   border: none;
+  background-color: $red;
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    transform: scale(1.1);
-    animation-name: hover-color-from-red;
+    background-color: $medium-gray;
+    animation-name: hover-button;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
   }
 
   &:active {
-    background-color: $yellow;
+    background-color: $red;
     opacity: 0.5;
   }
 }

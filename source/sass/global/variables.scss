@@ -21,8 +21,14 @@ $shadow: rgba(0, 0, 0, 0.25);
 
 // ширина экрана //
 
-$desktop-width: 1920px;
+$desktop-width: 1919px;
 $content-width: 1170px;
+$desktop-breakpoint: 1199px;
+$desktop-content: 1023px;
+$tablet-breakpoint: 767px;
+$tablet-content: 639px;
+$mobile-breakpoint: 579px;
+$mobile-content: 479px;
 
 /** подготовка графики - ретина **/
 $retina-dpi: 144dpi;

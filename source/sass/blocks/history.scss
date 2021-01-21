@@ -8,6 +8,25 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/monitor-background@2x.png");
   }
+
+  @media (max-width: $desktop-breakpoint) {
+    padding: 80px 40px 140px 585px;
+  }
+
+  @media (max-width: $desktop-content) {
+    background-size: 306px auto;
+    padding: 80px 40px 140px 336px;
+  }
+
+  @media (max-width: $desktop-content) {
+    background-size: 306px auto;
+    background-position: center 80px;
+    padding: 386px 40px 80px;
+  }
+
+  @media (max-width: $mobile-content) {
+    padding: 386px 20px 80px;
+  }
 }
 
 .history__title {
@@ -27,6 +46,15 @@
     left: 0;
     background-color: $red;
   }
+
+  @media (max-width: $desktop-content) {
+    margin-bottom: 20px;
+    font-size: 24px;
+
+    &::before {
+      height: 24px;
+    }
+  }
 }
 
 .history__content {
@@ -36,6 +64,10 @@
   font-size: 14px;
   line-height: 29px;
   color: $medium-gray;
+
+  @media (max-width: $desktop-content) {
+    margin-bottom: 20px;
+  }
 }
 
 .history__link {
@@ -55,16 +87,20 @@
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    border: none;
-    transform: scale(1.1);
-    animation-name: hover-color-from-red;
+    background-color: $medium-gray;
+    animation-name: hover-button;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
   }
 
   &:active {
-    background-color: $yellow;
+    background-color: $red;
     opacity: 0.5;
+  }
+
+  @media (max-width: $desktop-content) {
+    width: 160px;
+    padding: 14px 0;
+    font-size: 12px;
   }
 }
