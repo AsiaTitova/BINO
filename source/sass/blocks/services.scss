@@ -21,22 +21,30 @@
 }
 
 .services__container {
-  padding: 154px 465px 135px 0;
+  padding: 145px 465px 137px 0;
+
+  @media (max-width: 1920px) {
+    padding: 145px 155px 137px 0;
+  }
 
   @media (max-width: $desktop-width) {
-    padding: 154px 13.1% 135px 0;
+    padding: 145px 13.1% 137px 0;
   }
 
   @media (max-width: 1440px) {
-    padding: 154px 34.1% 135px 0;
+    padding: 145px 34.1% 137px 0;
+  }
+
+  @media (max-width: 1380px) {
+    padding: 145px 35.1% 137px 0;
   }
 
   @media (max-width: 1200px) {
-    padding: 154px 41.5% 135px 0;
+    padding: 145px 41.5% 137px 0;
   }
 
   @media (max-width: 1024px) {
-    padding: 154px 42% 135px 0;
+    padding: 145px 42% 137px 0;
   }
 
   @media (max-width: $desktop-content) {
@@ -52,11 +60,12 @@
   position: relative;
   display: block;
   margin: 0;
-  margin-bottom: 75px;
-  margin-right: 135px;
-  padding-right: 35px;
+  margin-bottom: 67px;
+  margin-right: 120px;
+  padding-right: 32px;
   font-family: $font-title;
   font-size: 36px;
+  letter-spacing: 3.6px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: right;
@@ -64,7 +73,7 @@
 
   &::before {
     @include pseudo ("", absolute, 6px, 36px);
-    top: 0;
+    top: 4px;
     right: 0;
     background-color: $red;
   }
@@ -109,7 +118,7 @@
 }
 
 .services__item:not(:last-child) {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 
   @media (max-width: $desktop-content) {
     margin-bottom: 30px;
@@ -130,7 +139,7 @@
 
 .services__subtitle {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
@@ -141,6 +150,7 @@
 .services__content {
   margin: 0;
   font-size: 14px;
+  line-height: 28px;
   font-family: $font-title;
   text-align: right;
   color: $medium-gray;
@@ -215,7 +225,9 @@
 .services__icon {
   position: relative;
   display: block;
-  margin-left: 55px;
+  top: 7px;
+  right: 5px;
+  margin-left: 46px;
   width: 74px;
   height: 74px;
   border-radius: 50%;
@@ -224,7 +236,7 @@
   &::before {
     @include pseudo ("", absolute, 64px, 64px);
     border-radius: 50%;
-    top: 5px;
+    top: 4px;
     left: 5px;
     z-index: 1;
     background-color: $light-gray;

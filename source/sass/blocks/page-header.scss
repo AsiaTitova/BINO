@@ -43,7 +43,6 @@
 
 .page-header__container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 
   @media (max-width: $desktop-breakpoint) {
@@ -58,6 +57,7 @@
 
 .page-header__logo {
   padding: 40px 0;
+  margin-right: auto;
 
   @media (max-width: $desktop-content) {
     padding: 10px 0 10px 40px;

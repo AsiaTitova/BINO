@@ -2,7 +2,11 @@
   @include list-style (none, 0, 0);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-breakpoint) {
+    justify-content: center;
+  }
 }
 
 .filter__item {
@@ -15,7 +19,7 @@
 
 .filter__item:not(:last-child) {
   margin-right: 18px;
-  padding-right: 18px;
+  padding-right: 32px;
 
   &::before {
     @include pseudo ("/", absolute, 6px, 14px);

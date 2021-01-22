@@ -10,21 +10,22 @@
 }
 
 .free-trial__container {
-  padding: 150px 0 140px;
+  padding: 140px 0 140px;
 
   @media (max-width: $tablet-breakpoint) {
-    padding: 150px 20px 140px;
+    padding: 140px 20px 140px;
   }
 }
 
 .free-trial__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
   font-family: $font-title;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 400;
   color: $white;
   text-align: center;
+  letter-spacing: 2px;
 
   @media (max-width: $desktop-content) {
     font-size: 24px;
@@ -44,6 +45,7 @@
   line-height: 21px;
   color: $white;
   text-align: center;
+  letter-spacing: 1.7px;
 }
 
 .free-trial__link {

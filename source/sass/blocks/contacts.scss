@@ -3,16 +3,16 @@
 }
 
 .contacts__container {
-  padding: 150px 0;
+  padding: 140px 0 150px;
 
   @media (max-width: $desktop-breakpoint) {
-    padding: 150px 20px;
+    padding: 140px 20px 150px;
   }
 }
 
 .contacts__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: $font-title;
   font-size: 36px;
   font-weight: bold;
@@ -75,7 +75,7 @@
 .contacts__list {
   @include list-style (none, 0, 0);
   width: 478px;
-  padding: 100px 120px 100px 80px;
+  padding: 91px 120px 90px 89px;
 
   @media (max-width: $desktop-breakpoint) {
     width: 380px;
@@ -100,7 +100,7 @@
 
 .contacts__form {
   width: 665px;
-  padding: 100px 95px;
+  padding: 90px 101px 100px;
 
   @media (max-width: $desktop-breakpoint) {
     width: 480px;
@@ -120,7 +120,7 @@
 
 .contacts__subtitle {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-family: $font-title;
   font-size: 24px;
   line-height: 24px;

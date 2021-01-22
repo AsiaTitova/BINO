@@ -1,14 +1,14 @@
 .blog__container {
-  padding: 120px 0 75px;
+  padding: 110px 0 70px;
 
   @media (max-width: $desktop-breakpoint) {
-    padding: 120px 20px 75px;
+    padding: 110px 20px 70px;
   }
 }
 
 .blog__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   font-family: $font-title;
   font-size: 36px;
   font-weight: bold;

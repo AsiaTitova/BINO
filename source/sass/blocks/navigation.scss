@@ -1,8 +1,12 @@
 .navigation {
   @include list-style (none, 0, 0);
   display: flex;
-  padding: 60px 0 40px;
-  margin-left: auto;
+  margin-left: 301px;
+  padding: 57px 0 40px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: auto;
+  }
 
   @media (max-width: $desktop-content) {
     display: none;
@@ -11,7 +15,7 @@
 }
 
 .navigation__item:not(:last-child) {
-  margin-right: 55px;
+  margin-right: 58px;
 }
 
 .navigation__link {

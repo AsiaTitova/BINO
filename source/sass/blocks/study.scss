@@ -1,5 +1,5 @@
 .study__container {
-  padding: 147px 0 150px;
+  padding: 141px 0 197px;
   background-image: url("../img/background-study.png");
   background-size: 587px 722px;
   background-repeat: no-repeat;
@@ -14,22 +14,23 @@
   }
 
   @media (max-width: $desktop-content) {
-    padding: 147px 20px 150px;
+    padding: 141px 20px 197px;
     background-position: 181px 320px;
   }
 
   @media (max-width: $mobile-content) {
-    padding: 147px 16px 150px;
+    padding: 141px 16px 197px;
     background-position: center 320px;
   }
 }
 
 .study__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
   font-family: $font-title;
   font-size: 36px;
   font-weight: bold;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
@@ -45,6 +46,7 @@
   margin-bottom: 110px;
   padding-bottom: 30px;
   font-size: 14px;
+  letter-spacing: 0.2px;
   line-height: 29px;
   color: $medium-gray;
   text-align: center;
@@ -80,8 +82,8 @@
 .study__wrap {
   position: relative;
   width: 665px;
-  min-height: 653px;
-  padding: 80px 65px 50px;
+  min-height: 630px;
+  padding: 100px 60px 50px;
   background-color: $white;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 
@@ -111,16 +113,16 @@
 
 .study__icon {
   position: relative;
-  width: 66px;
-  height: 66px;
-  margin: 0 auto 55px;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 70px;
   background-color: $red;
   transform: rotate(45deg);
 }
 
 .study__icon svg {
   position: relative;
-  top: 17px;
+  top: 28px;
   left: 50%;
   transform: translateX(-50%) rotate(-45deg);
 }
@@ -128,13 +130,14 @@
 .study__subtitle {
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
-  padding-bottom: 30px;
+  margin-bottom: 22px;
+  padding-bottom: 28px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   color: $dark-gray;
   text-align: center;
+  letter-spacing: 1.9px;
 
   &::before {
     @include pseudo ("", absolute, 41px, 1px);
@@ -151,9 +154,10 @@
 
 .study__description {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 42px;
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0.2px;
   font-weight: 300;
   color: $medium-gray;
   text-align: center;

@@ -28,7 +28,7 @@
 .promo-slider__container {
   position: relative;
   z-index: 3;
-  padding: 325px 50px 500px;
+  padding: 323px 50px 258px;
 
   &::before {
     @include pseudo ("", absolute, 74px, 74px);
@@ -55,7 +55,7 @@
   }
 
   @media (max-width: $desktop-breakpoint) {
-    padding: 325px 50px 350px;
+    padding: 323px 50px 350px;
   }
 
   @media (max-width: $desktop-content) {
@@ -82,8 +82,12 @@
     padding: 0 320px;
   }
 
-  @media (max-width: $desktop-breakpoint) {
+  @media (max-width: 1440px) {
     padding: 0 200px;
+  }
+
+  @media (max-width: 1380px) {
+    padding: 0 150px;
   }
 
   @media (max-width: $desktop-content) {
@@ -100,10 +104,12 @@
 }
 
 .promo-slider__slogan {
-  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 27px;
   font-family: $font-title;
   color: $white;
   font-size: 24px;
+  letter-spacing: 1.2px;
   text-align: center;
 
   @media (max-width: $desktop-content) {
@@ -117,10 +123,12 @@
 
 .promo-slider__title {
   position: relative;
-  margin-bottom: 45px;
-  padding-bottom: 45px;
+  margin: 0;
+  margin-bottom: 38px;
+  padding-bottom: 40px;
   color: $white;
   font-size: 72px;
+  letter-spacing: 6.5px;
   text-align: center;
   text-transform: uppercase;
 
@@ -158,8 +166,8 @@
 }
 
 .promo-slider__text {
-  margin-bottom: 50px;
-  padding: 0 90px;
+  margin-bottom: 65px;
+  padding: 0 320px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -223,7 +231,7 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 160px;
+  top: 140px;
   left: 0;
   width: 45px;
   height: 45px;

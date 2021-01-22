@@ -3,7 +3,7 @@
 }
 
 .about__container {
-  padding: 116px 0 107px;
+  padding: 127px 0 107px;
 
   @media (max-width: $desktop-content) {
     padding: 116px 0 57px;
@@ -63,7 +63,7 @@
   display: block;
   width: 74px;
   height: 74px;
-  margin: 0 auto 30px;
+  margin: 0 auto 28px;
 
   &::before {
     @include pseudo ("", absolute, 74px, 74px);
@@ -82,10 +82,13 @@
 }
 
 .about__title {
+  margin: 0;
+  margin-bottom: 14px;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 17px;
   font-size: 18px;
   font-weight: 600px;
+  letter-spacing: 1.2px;
   color: $dark-gray;
   text-align: center;
   cursor: default;
@@ -102,6 +105,7 @@
 .about__content {
   margin: 0;
   font-size: 12px;
+  line-height: 20px;
   font-weight: 300px;
   text-align: center;
   color: $medium-gray;

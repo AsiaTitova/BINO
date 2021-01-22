@@ -1,14 +1,14 @@
 .clients__container {
-  padding: 150px 0 110px;
+  padding: 140px 0 110px;
 
   @media (max-width: $desktop-breakpoint) {
-    padding: 150px 20px 110px;
+    padding: 140px 20px 110px;
   }
 }
 
 .clients__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-family: $font-title;
   font-size: 36px;
   font-weight: bold;
@@ -25,7 +25,7 @@
   position: relative;
   margin: 0;
   margin-bottom: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
   font-size: 14px;
   line-height: 21px;
   color: $medium-gray;

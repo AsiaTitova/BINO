@@ -1,8 +1,8 @@
 .history__container {
-  padding: 150px 0 140px 585px;
+  padding: 138px 0 148px 585px;
   background-image: url("../img/monitor-background.png");
   background-size: 506px 407px;
-  background-position: 0 150px;
+  background-position: 0 142px;
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -32,17 +32,18 @@
 .history__title {
   position: relative;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
   padding-left: 35px;
   font-family: $font-title;
   font-size: 36px;
+  letter-spacing: 3.6px;
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-gray;
 
   &::before {
     @include pseudo ("", absolute, 6px, 36px);
-    top: 0;
+    top: 4px;
     left: 0;
     background-color: $red;
   }
@@ -59,7 +60,7 @@
 
 .history__content {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 33px;
   font-family: $font-title;
   font-size: 14px;
   line-height: 29px;
@@ -72,8 +73,9 @@
 
 .history__link {
   display: block;
-  padding: 18px 0;
-  width: 233px;
+  margin-top: 45px;
+  padding: 18px 0 22px;
+  width: 225px;
   font-size: 14px;
   color: $white;
   font-weight: bold;

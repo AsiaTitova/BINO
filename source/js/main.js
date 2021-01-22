@@ -10,6 +10,17 @@
 
   const container = document.querySelector('.page-header');
   const toggler = document.querySelector('.page-header__toggler');
+  const navigationItems = document.querySelectorAll('.navigation__link');
+
+  const closeNavigation = () => {
+    navigationItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        container.classList.remove('page-header--menu');
+      })
+    })
+  }
+
+  closeNavigation();
 
   toggler.addEventListener('click', function () {
     container.classList.toggle('page-header--menu');
