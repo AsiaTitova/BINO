@@ -24,15 +24,17 @@
   }
 }
 
-.page-footer__scroll {
-  position: absolute;
+.scroll {
+  position: fixed;
+  display: block;
   width: 58px;
   height: 58px;
-  top: -29px;
+  bottom: 50px;
   right: 55px;
   border: none;
   border-radius: 50%;
   background-color: $red;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -46,9 +48,13 @@
     background-color: $red;
     opacity: 0.5;
   }
+
+  &--close {
+    display: none;
+  }
 }
 
-.page-footer__icon {
+.scroll__icon {
   fill: $white;
   transform: rotate(90deg);
   width: 8px;
