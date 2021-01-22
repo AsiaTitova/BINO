@@ -29,19 +29,25 @@
   // ------ services ------ //
 
   const servicesItems = document.querySelectorAll('.services__item');
+  const barItems = document.querySelectorAll(".services__bar")
+
+  const removeActiveClassBar = () => {
+    barItems.forEach(function (bar) {
+      bar.classList.remove('services__bar--active');
+    })
+  }
 
   const showActiveServicesItem = () => {
-    servicesItems.forEach(function (item) {
+    servicesItems.forEach(function (item, index) {
       item.onmouseenter = item.onmouseleave = handler;
 
       function handler (evt) {
 
         if (evt.type === 'mouseenter') {
-          evt.target.classList.add('services__item--active');
-        }
-
-        if (evt.type === 'mouseleave') {
-          evt.target.classList.remove('services__item--active');
+          removeActiveClassBar();
+          for (let i = 0; i < barItems.length; i++) {
+            barItems[index].classList.add('services__bar--active');
+          }
         }
       }
     });
